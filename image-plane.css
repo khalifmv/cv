@@ -149,9 +149,6 @@
 
 @media screen and (max-width: 720px) {
 
-    #content {
-        /* margin: 0 10px; */
-    }
 
     .plane-wrapper {
         height: 57vh;
