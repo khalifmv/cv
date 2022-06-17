@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="image-plane.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .title {
+      animation-name: example;
+      animation-duration: .2s;
+    }
+
+    p {
+      font-size: large;
+    }
+
+    @keyframes example {
+      0% {
+        opacity: 0;
+      }
+
+      /* 50%{
+        opacity: 1;
+      } */
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="canvas"></div>
+  <div id="canvas2"></div>
+  <div id="canvasImg"></div>
+  <div id="loader">
+    Loading
+  </div>
+  <div class="block md:hidden w-full py-4">
+    <div id="scroll-down" class="w-full flex justify-center items-center py-2 scroll-down">
+      <p class="text-sm">Scroll Down</p>
+      <div class="mx-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15.539" height="19.985" viewBox="0 0 23.539 29.985">
+          <g id="down-arrow" transform="translate(-67.666 0.6)">
+            <g id="Group_1" data-name="Group 1" transform="translate(68.266)">
+              <path id="Path_1" data-name="Path 1"
+                d="M90.452,18.153l-2.9-2.664a.528.528,0,0,0-.71,0L81.974,20V.48A.5.5,0,0,0,81.466,0H77.4A.5.5,0,0,0,76.9.48V20l-4.872-4.515a.529.529,0,0,0-.709,0l-2.9,2.664a.46.46,0,0,0,0,.687l10.662,9.81a.528.528,0,0,0,.708,0l10.662-9.81a.461.461,0,0,0,0-.687Z"
+                transform="translate(-68.266)" fill="none" stroke="#000" stroke-width="1.2"></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+  </div>
+  </div>
+  <div id="content">
+    <div id="debug" style="display: none">
+      Planes actually drawn: <strong id="debug-value">0</strong>
+    </div>
+    <div class="flex flex-col md:flex-row mt-20 block-wrapper">
+      <div class="w-full md:w-1/4">
+        <h1 class="title text-plane text-4xl md:text-md font-bold text-left">
+          AKHMAD KHALIF MA'ARIF
+        </h1>
+        <p class="text-plane">Frontend Developer</p>
+        <div id="planes">
+          <div class="plane-wrapper">
+            <div class="plane-inner">
+              <div class="plane">
+                <img src="me.jpeg" crossorigin="" data-sampler="planeTexture" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-3/4 pl-24">
+        <div class="text-wrap">
+          <p class="text-plane">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, excepturi eos tempora, corrupti
+            velit consectetur quis voluptatibus voluptatem dignissimos esse ex id, deserunt magni ut vitae expedita
+            dolorem libero quam?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row mt-20 block-wrapper">
+      <div class="w-full md:w-1/4">
+        <h1 class="text-plane text-4xl md:text-md font-bold text-left">
+          EXPERIENCE
+        </h1>
+      </div>
+      <div class="w-full md:w-3/4 pl-24">
+        <div class="text-wrap">
+          <p class="text-plane">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, excepturi eos tempora, corrupti
+            velit consectetur quis voluptatibus voluptatem dignissimos esse ex id, deserunt magni ut vitae expedita
+            dolorem libero quam?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row mt-20 block-wrapper">
+      <div class="w-full md:w-1/4">
+        <h1 class="text-plane text-4xl md:text-md font-bold text-left">
+          EDUCATION
+        </h1>
+        <!-- <div id="planes">
+          <div class="plane-wrapper">
+            <div class="plane-inner">
+              <div class="plane">
+                <img src="https://www.curtainsjs.com/examples/medias/plane-texture-3.jpg" crossorigin="" data-sampler="planeTexture" />
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <div class="w-full md:w-3/4 pl-24">
+        <div class="text-wrap">
+          <p class="text-plane">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, excepturi eos tempora, corrupti
+            velit consectetur quis voluptatibus voluptatem dignissimos esse ex id, deserunt magni ut vitae expedita
+            dolorem libero quam?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row mt-20 block-wrapper">
+      <div class="w-full md:w-1/4">
+        <h1 class="text-plane text-4xl md:text-md font-bold text-left">
+          SKILLS
+        </h1>
+      </div>
+      <div class="w-full md:w-3/4 pl-24">
+        <div class="text-wrap">
+          <p class="text-plane">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, excepturi eos tempora, corrupti
+            velit consectetur quis voluptatibus voluptatem dignissimos esse ex id, deserunt magni ut vitae expedita
+            dolorem libero quam?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <h2>
+      <span class="text-plane">
+        Rendering text<br />
+        to WebGL
+      </span>
+    </h2> -->
+
+    <!-- <div id="process" class="text-block">
+      <p>
+        <span class="text-plane">
+          This is an example of how we can render whole blocks of text to WebGL thanks to curtains.js and the
+          TextTexture class.
+        </span>
+      </p>
+      <p>
+        <span class="text-plane">
+          A WebGL plane is created for all elements that have a "text-plane" class and their text contents are
+          drawn inside a 2D canvas, which is then used as a WebGL texture.
+        </span>
+      </p>
+    </div> -->
+
+    <!-- <div id="scroll" class="text-block">
+      <p>
+        <span class="text-plane">
+          We're using an additional shader pass to add a cool effect on scroll that makes you feel like the
+          content is actually dragged.
+        </span>
+      </p>
+      <p>
+        <span class="text-plane">
+          Try to scroll down to see what happens!
+        </span>
+      </p>
+    </div>
+
+    <div id="lipsum" class="text-block">
+      <p>
+        <span class="text-plane">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a dolor posuere nisi tempus
+          rhoncus. Curabitur venenatis velit a tellus porttitor, sed efficitur ipsum volutpat. Nunc ante ante,
+          convallis in commodo eget, semper ac ex. Fusce lobortis risus vel nisl interdum imperdiet. Nulla
+          facilisi
+        </span>
+      </p>
+      <p>
+        <span class="text-plane">
+          Cras hendrerit iaculis est at vestibulum. Integer tincidunt mi id metus mollis, in fermentum odio
+          sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+          Phasellus in efficitur diam.
+        </span>
+      </p>
+    </div> -->
+  </div>
+</body>
+<script type="module" src="index.js"></script>
+<script type="module" src="shimmer.js"></script>
+<script type="module" src="image-plane.js"></script>
+
+</html>

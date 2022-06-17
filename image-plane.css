@@ -1,0 +1,169 @@
+@media screen {
+
+    /* html, body {
+        min-height: 100%;
+    } */
+
+    /*** layout ***/
+
+    #page-wrap {
+        position: relative;
+    }
+
+    /*** canvasImg ***/
+
+    /* our canvasImg will be a bit taller than our window to avoid "glitched" top and bottom edges */
+    #canvasImg {
+        position: fixed;
+        filter: grayscale(90%);
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 10;
+        opacity: 0;
+        transition: opacity 0.5s ease-in;
+    }
+
+    .planes-loaded #canvasImg {
+        opacity: 1;
+    }
+
+    /*** content ***/
+
+    #content {
+        position: relative;
+        z-index: 15;
+        /* max-width: 1440px; */
+        margin: 0 auto;
+        /* padding: 40px 0 0 0; */
+    }
+
+    #debug {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background: white;
+        font-size: 0.9em;
+        padding: 0.25em 0.5em;
+        z-index: 10;
+    }
+
+    #planes {
+        overflow: hidden;
+        opacity: 0;
+
+        transition: opacity 0.5s ease-in;
+    }
+
+    .planes-loaded #planes {
+        opacity: 1;
+    }
+
+    .plane-wrapper {
+        position: relative;
+
+        width: 75%;
+        height: 30vh;
+        margin: 10vh 25% 10vh 0;
+    }
+
+    .plane-wrapper:nth-child(even) {
+        margin: 10vh 0 10vh 25%;
+    }
+
+    .plane-wrapper:first-child {
+        margin-top: 5vh;
+    }
+
+    .plane-wrapper:last-child {
+        margin-bottom: 20vh;
+    }
+
+    .plane-title {
+        color: white;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        font-size: 2em;
+        font-weight: 700;
+        background: #ee6557;
+        display: inline-block;
+        padding: 0.125em 0.25em;
+    }
+
+    .plane {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .plane img {
+        display: none;
+    }
+
+
+    /*** handling errors ***/
+
+    .no-curtains .plane-title {
+        z-index: 1;
+    }
+
+    .no-curtains .plane {
+        display: flex;
+        overflow: hidden;
+    }
+
+    .no-curtains .plane img {
+        display: block;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 1320px) {
+
+    .plane-wrapper {
+        width: 87.5%;
+        height: 60vh;
+        margin: 10vh 12.5% 10vh 0;
+    }
+
+    .plane-wrapper:nth-child(even) {
+        margin: 10vh 0 10vh 12.5%;
+    }
+
+    .plane-wrapper:last-child {
+        margin-bottom: 20vh;
+    }
+
+}
+
+
+@media screen and (max-width: 720px) {
+
+    #content {
+        /* margin: 0 10px; */
+    }
+
+    .plane-wrapper {
+        height: 57vh;
+        margin: 7.5vh auto;
+    }
+
+    .plane-wrapper:nth-child(even) {
+        margin: 7.5vh auto;
+    }
+
+    .plane-wrapper:last-child {
+        margin-bottom: 12.5vh;
+    }
+
+}

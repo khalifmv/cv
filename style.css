@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Merriweather Sans', sans-serif;
+    line-height: 1.2;
+    color: #000000;
+    font-size: 2vw;
+}
+#scroll-down{
+    opacity: 0;
+    transition: opacity .90s ease-in-out;
+}
+.scroll-down{
+    z-index: 999;
+    position: absolute;
+}
+
+#loader{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 1;
+    transition: opacity .20s ease-in-out;
+    pointer-events: none;
+}
+
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+#canvas2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+.text-plane {
+    /* display: inline-block; */
+
+    /* apply negative margins and padding to avoid chars from being cropped */
+    /* margin: -1em;
+    padding: 1em; */
+
+    /* hide the original text content */
+    opacity: 0;
+    
+}
+
+#content {
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+    padding: 3.5vw;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+}
+
+#content h1 {
+    /* margin: 25vh 0; */
+    /* font-size: 6vw; */
+    text-transform: uppercase;
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 600;
+    line-height: .9;
+}
+
+#content h2 {
+    width: 50%;
+    margin: 15vh 0 15vh 50%;
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+}
+.block-wrapper{
+    /* display: block; */
+    min-height: 25vh;
+}
+.text-wrap{
+    width: 90%
+}
+
+.text-block {
+    width: 50%;
+    margin: 15vh 0;
+}
+
+#scroll {
+    margin-left: 25%;
+}
+
+#lipsum {
+    margin-left: 50%;
+}
+
+@media screen and (max-width: 720px) {
+
+    #content h1 {
+        padding-top: 2rem;
+        text-transform: uppercase;
+        font-family: 'Archivo Black', sans-serif;
+        font-weight: 600;
+        line-height: .9;
+    }
+
+}
